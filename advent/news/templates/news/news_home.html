@@ -1,0 +1,16 @@
+{% extends 'advent/layout.html' %}
+
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Новости и статьи</h1>
+        {% for el in news %}
+           <p><button class="alert alert-warning">
+               <a href="{% url 'news-detail' el.id %}">
+                <h3>{{ el.title }}</h3>
+                {{ el.anons }}</a>
+            </button></p>
+        {% endfor %}
+    </div>
+{% endblock %}

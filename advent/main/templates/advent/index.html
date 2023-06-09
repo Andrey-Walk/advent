@@ -1,0 +1,11 @@
+{% extends 'advent/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p><button class="alert alert-warning">Advent - это приложение по поиску ближайших путешествий в которые можно успеть записаться.<br> - Поиск идет по ближайшим указанным дата<br> - Указаны цены<br> - Регион<br> - Название маршрута </button></p>
+        <button class="btn btn-warning"><a href="{% url 'prog' %}"><i class="bi-pin-map-fill"></i>Перейти к планированию путишествий</a></button>
+    </div>
+{% endblock %}

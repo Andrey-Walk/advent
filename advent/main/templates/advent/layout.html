@@ -1,0 +1,33 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <aside>
+        <img src="{% static 'main/img/icon.svg' %}" alt="Лого">
+        <span class="logo">Advent</span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="bi-globe"></i>Главная</li></a>
+            <a href="{% url 'prog' %}"><li><i class="bi-pin-map-fill"></i>Поиск путишествий</li></a>
+            <a href="{% url 'transport' %}"><li><i class="bi-pin-map-fill"></i>Найти транспорт</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="bi-send-exclamation"></i>Новости</li></a>
+            <a href="{% url 'about' %}"><li><i class="bi bi-envelope"></i></i>Контакты</li></a>
+            <a href="{% url 'create' %}"><li><i class="bi bi-journals"></i></i>Редактирование</li></a>
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

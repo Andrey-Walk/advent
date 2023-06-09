@@ -1,0 +1,19 @@
+{% extends 'advent/layout.html' %}
+
+{% block title %}Публикация новостей{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Публикация новостей</h1>
+        <button class="btn create">
+        <p><form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.anons }}<br>
+            {{ form.full_text }}<br>
+            {{ form.data }}<br>
+            <button  class="btn btn-warning" type="submit">Добавить новость</button>
+        </form></p>
+        </button>
+    </div>
+{% endblock %}

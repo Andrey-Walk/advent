@@ -1,0 +1,27 @@
+{% extends 'advent/layout.html' %}
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+{% block title %}Advent{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Всего найдено из доступных: {{ count }}</h1>
+        {% for el, il, el2, il2 in values %}
+                <p> <button class="alert alert-warning"><a href="{{ il }}">{% filter upper %}{{ el }}</a></button></br></p>
+                {% endfilter %}
+                <p> <button class="alert alert-warning"><a href="{{ il2 }}">{% filter upper %}{{ el2 }}</a></button></br></p>
+                {% endfilter %}
+        {% endfor %}
+        <button class="btn btn-warning"><a  href="{% url 'prog' %}">1</a></button>
+        <button class="btn btn-warning"><a  href="{% url 'prog2' %}">2</a></button>
+        <button class="btn btn-warning"><a  href="{% url 'prog3' %}">3</a></button>
+        <button class="btn btn-warning"><a  href="{% url 'prog4' %}">4</a></button>
+        <button class="btn btn-warning"><a  href="{% url 'prog5' %}">5</a></button>
+        <button class="btn btn-warning"><a  href="{% url 'prog6' %}">6</a></button>
+        <button class="btn btn-warning"><a  href="{% url 'prog7' %}">7</a></button>
+        <button class="btn btn-warning"><a  href="{% url 'prog8' %}">8</a></button>
+        <button class="btn btn-warning"><a  href="{% url 'prog9' %}">9</a></button>
+        <button class="btn btn-warning"><a  href="{% url 'prog10' %}">10</a></button>
+    </div>
+{% endblock %}
+>

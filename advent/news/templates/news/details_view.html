@@ -1,0 +1,12 @@
+{% extends 'advent/layout.html' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ article.title }}</h1>
+           <p><button class="alert alert-warning">
+                <a>{{ article.full_text }}</a>
+            </button></p>
+    </div>
+{% endblock %}
